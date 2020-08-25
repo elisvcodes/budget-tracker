@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style/kore.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header class=" bg-dark">
+        <nav class="container navbar">
+            <a href="" class="logo center">Budget Tracker</a>
+        </nav>
+    </header>
+
+    <section class="grid mgt-4 center">
+        <div class="container">
+            <div class="row column-gap">
+                <div class="column full-border">
+                    <h4>Income </h4>
+                    <h5 id="income">0</h5>
+                </div>
+                <div class="column full-border">
+                    <h4>Expense </h4>
+                    <h5 id="expense">0</h5>
+                </div>
+                <div class="column full-border">
+                    <h4>Total </h4>
+                    <h5 id="total">0</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid mgt-4">
+        <div class="container">
+            <form id="form">
+                <div class="row column-gap">
+                    <div class="column">
+                        <input type="text" name="name-input" id="name-input" placeholder="Enter name">
+                    </div>
+                    <div class="column">
+                        <input type="text" name="income-input" id="income-input" placeholder="Enter Income"
+                            disabled='disabled'>
+                        <input type="text" name="expense-input" id="expense-input" placeholder="Enter expense"
+                            style="display:none">
+                    </div>
+                    <div class="column">
+                        <select name="type" id="type">
+                            <option value="type">Type</option>
+                            <option value="income" id="option-income">Income</option>
+                            <option value="expense" id="option-expense">Expense</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-black">Add</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="grid mgt-4">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h5>Name</h5>
+                </div>
+                <div class="column">
+                    <h5>Monetary Value</h5>
+                </div>
+                <div class="column">
+                    <h5>Type</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid mgt-4">
+        <div class="container" id="list">
+        </div>
+    </section>
+
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
